@@ -1,18 +1,3 @@
-.. image:: https://img.shields.io/pypi/v/Pafy.svg
-    :target: https://pypi.python.org/pypi/pafy
-.. image:: https://img.shields.io/pypi/dm/Pafy.svg
-    :target: https://pypi.python.org/pypi/pafy
-.. image:: https://img.shields.io/coveralls/mps-youtube/pafy/develop.svg
-    :target: https://coveralls.io/r/mps-youtube/pafy?branch=develop
-.. image:: https://landscape.io/github/mps-youtube/pafy/develop/landscape.svg
-    :target: https://landscape.io/github/mps-youtube/pafy/develop
-    :alt: Code Health
-.. image:: https://travis-ci.org/mps-youtube/pafy.svg?branch=develop
-    :target: https://travis-ci.org/mps-youtube/pafy
-.. image:: https://img.shields.io/pypi/wheel/Pafy.svg
-    :target: http://pythonwheels.com/
-    :alt: Wheel Status
-
 Features
 --------
 
@@ -21,19 +6,19 @@ Features
 - Command line tool (ytdl) for downloading directly from the command line
 - Retrieve the URL to stream the video in a player such as vlc or mplayer
 - Works with age-restricted videos and non-embeddable videos
-- Small, standalone, single importable module file (pafy.py)
+- Small, standalone, single importable module file (pafy2.py)
 - Select highest quality stream for download or streaming
 - Download video only (no audio) in m4v or webm format
 - Download audio only (no video) in ogg or m4a format
 - Retreive playlists and playlist metadata
 - Works with Python 2.6+ and 3.3+
-- Optionally depends on youtube-dl (recommended; more stable)
+- Optionally depends on yt_dlp (recommended; more stable)
 
 
 Documentation
 -------------
 
-Full documentation is available at http://pythonhosted.org/pafy
+Full documentation is available at http://pythonhosted.org/pafy (is not pafy2)
 
 Usage Examples
 --------------
@@ -43,14 +28,14 @@ Here is how to use the module in your own python code.  For command line tool
 
 .. code-block:: pycon
 
-    >>> import pafy
+    >>> import pafy2
 
 create a video instance from a YouTube url:
 
 .. code-block:: pycon
 
     >>> url = "https://www.youtube.com/watch?v=bMt47wvK6u0"
-    >>> video = pafy.new(url)
+    >>> video = pafy2.new(url)
 
 get certain attributes:
 
@@ -217,11 +202,11 @@ show all media types for a video (video+audio, video-only and audio-only):
 Installation
 ------------
 
-pafy can be installed using `pip <http://www.pip-installer.org>`_:
+pafy2 can be installed using `pip <http://www.pip-installer.org>`_:
 
 .. code-block:: bash
 
-    $ [sudo] pip install pafy
+    $ [sudo] pip install pafy2
 
 or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it system-wide:
 
@@ -229,7 +214,7 @@ or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it s
 
     $ virtualenv venv
     $ source venv/bin/activate
-    $ pip install pafy
+    $ pip install pafy2
 
 
 Command Line Tool (ytdl) Usage
@@ -314,8 +299,3 @@ Download m4a audio stream at 256k bitrate:
 .. code-block:: bash
 
     $ ytdl -n10 cyMHZVT91Dw
-
-IRC
----
-
-The mps-youtube irc channel (`#mps-youtube` on Freenode) can be used for discussion of pafy.
