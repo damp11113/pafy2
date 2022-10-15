@@ -3,7 +3,7 @@
 
 """ setup.py for pafy.
 
-https://github.com/mps-youtube/pafy
+https://github.com/damp11113/pafy2
 
 python setup.py sdist bdist_wheel
 
@@ -13,20 +13,19 @@ from setuptools import setup
 from pafy import __version__
 
 setup(
-    name='pafy',
-    packages=['pafy'],
+    name='pafy2',
+    packages=['pafy2'],
     scripts=['scripts/ytdl'],
     version=__version__,
-    description="Retrieve YouTube content and metadata",
-    keywords=["pafy", "API", "YouTube", "youtube", "download", "video"],
+    description="Retrieve YouTube content and metadata with yt_dlp",
+    keywords=["pafy2", "API", "YouTube", "youtube", "download", "video", "yt_dlp"],
     author="np1",
-    author_email="np1nagev@gmail.com",
-    url="https://github.com/mps-youtube/pafy/",
-    download_url="https://github.com/mps-youtube/pafy/tags",
+    author_email="damp51252@gmail.com",
+    url="https://github.com/damp11113/pafy2/",
+    download_url="https://github.com/damp11113/pafy2/tags",
     extras_require={
         'youtube-dl-backend': ["youtube-dl"],
         },
-    package_data={"": ["LICENSE", "README.rst", "CHANGELOG", "AUTHORS"]},
     include_package_data=True,
     license='LGPLv3',
     classifiers=[
