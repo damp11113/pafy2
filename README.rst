@@ -206,7 +206,7 @@ pafy2 can be installed using `pip <http://www.pip-installer.org>`_:
 
 .. code-block:: bash
 
-    $ [sudo] pip install pafy2
+    $ [sudo] pip install git+https://github.com/damp11113/pafy2.git
 
 or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it system-wide:
 
@@ -214,7 +214,7 @@ or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it s
 
     $ virtualenv venv
     $ source venv/bin/activate
-    $ pip install pafy2
+    $ pip install git+https://github.com/damp11113/pafy2.git
 
 
 Command Line Tool (ytdl) Usage
