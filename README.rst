@@ -13,7 +13,24 @@ Features
 - Retreive playlists and playlist metadata
 - Works with Python 3.6+
 - Optionally depends on yt_dlp (recommended; more stable)
+- Fast fetch and download
 
+Installation
+------------
+
+pafy2 can be installed using `pip <http://www.pip-installer.org>`_:
+
+.. code-block:: bash
+
+    $ [sudo] pip install git+https://github.com/damp11113/pafy2.git
+
+or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it system-wide:
+
+.. code-block:: bash
+
+    $ virtualenv venv
+    $ source venv/bin/activate
+    $ pip install git+https://github.com/damp11113/pafy2.git
 
 Documentation
 -------------
@@ -197,105 +214,3 @@ show all media types for a video (video+audio, video-only and audio-only):
     audio m4a 128k
     audio ogg 128k
     audio m4a 48k
-
-
-Installation
-------------
-
-pafy2 can be installed using `pip <http://www.pip-installer.org>`_:
-
-.. code-block:: bash
-
-    $ [sudo] pip install git+https://github.com/damp11113/pafy2.git
-
-or use a `virtualenv <http://virtualenv.org>`_ if you don't want to install it system-wide:
-
-.. code-block:: bash
-
-    $ virtualenv venv
-    $ source venv/bin/activate
-    $ pip install git+https://github.com/damp11113/pafy2.git
-
-
-Command Line Tool (ytdl) Usage
-------------------------------
-
-
-.. code-block:: bash
-
-    usage: ytdl [-h] [-i] [-s]
-                [-t {audio,video,normal,all} [{audio,video,normal,all} ...]]
-                [-n N] [-b] [-a]
-                url
-
-    YouTube Download Tool
-
-    positional arguments:
-      url                   YouTube video URL to download
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      -i                    Display vid info
-      -s                    Display available streams
-      -t {audio,video,normal,all} [{audio,video,normal,all} ...]
-                            Stream types to display
-      -n N                  Specify stream to download by stream number (use -s to
-                            list available streams)
-      -b                    Download the best quality video (ignores -n)
-      -a                    Download the best quality audio (ignores -n)
-
-
-ytdl Examples
--------------
-
-Download best available resolution (-b):
-
-.. code-block:: bash
-
-    $ ytdl -b "http://www.youtube.com/watch?v=cyMHZVT91Dw"
-
-Download best available audio stream (-a)
-(note; the full url is not required, just the video id will suffice):
-
-.. code-block:: bash
-
-    $ ytdl -a cyMHZVT91Dw
-
-
-get video info (-i):
-
-.. code-block:: bash
-
-    $ ytdl -i cyMHZVT91Dw
-
-list available dowload streams:
-
-.. code-block:: bash
-
-    $ ytdl cyMHZVT91Dw
- 
-    Stream Type    Format Quality         Size            
-    ------ ----    ------ -------         ----            
-    1      normal  webm   [640x360]       33 MB
-    2      normal  mp4    [640x360]       23 MB
-    3      normal  flv    [320x240]       14 MB
-    4      normal  3gp    [320x240]        9 MB
-    5      normal  3gp    [176x144]        3 MB
-    6      audio   m4a    [48k]            2 MB
-    7      audio   m4a    [128k]           5 MB
-    8      audio   ogg    [128k]           5 MB
-    9      audio   ogg    [192k]           7 MB
-    10     audio   m4a    [256k]          10 MB
-
- 
-Download mp4 640x360 (ie. stream number 2):
-
-.. code-block:: bash
-
-    $ ytdl -n2 cyMHZVT91Dw
-
-Download m4a audio stream at 256k bitrate:
-
-.. code-block:: bash
-
-    $ ytdl -n10 cyMHZVT91Dw
