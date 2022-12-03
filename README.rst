@@ -11,7 +11,7 @@ Features
 - Download video only (no audio) in m4v or webm format
 - Download audio only (no video) in ogg or m4a format
 - Retreive playlists and playlist metadata
-- Works with Python 2.6+ and 3.3+
+- Works with Python 3.6+
 - Optionally depends on yt_dlp (recommended; more stable)
 
 
